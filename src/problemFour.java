@@ -15,6 +15,5 @@ public class problemFour {
             B = current;
         }
         System.out.println();
-
     }
 }
