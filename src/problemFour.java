@@ -1,19 +1,25 @@
 public class problemFour {
     public static void main(String[] args) {
-        int terms = 10;
-        System.out.println( terms );
-        NotFibonacci(terms);
+        long input = 1640;
+        int count = NotFibonacci(input);
+        System.out.println(count);
     }
-    public static void NotFibonacci(int terms) {
+    public static int NotFibonacci(long number) {
         long A = 0;
         long B = 1;
-        System.out.print(A + ", " + B);
-        for (int i = 2; i < terms; i++) {
+
+        int position = 2;
+        while (true) {
             long current = (3 * B) + (2 * A);
-            System.out.print(", " + current);
+            position++;
+
+            if (current == number) {
+                return position;
+            } else if (current > number) {
+                return position - 1;
+            }
             A = B;
             B = current;
         }
-        System.out.println();
     }
 }
