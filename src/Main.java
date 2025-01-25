@@ -1,7 +1,7 @@
 //01/21/2024
 //Christopher Garcia
 //Introduction to Algorithms
-public class Main {
+public class Main {///
     public static int problemOne(String text1, String text2){
         int count = 0;
         for (int i = 0; i < text1.length() && i < text2.length(); i++) {
