@@ -1,7 +1,7 @@
 //01/21/2024
 //Christopher Garcia
 //Introduction to Algorithms
-public class Main {///
+public class Main {
     public static int problemOne(String text1, String text2){
         int count = 0;
         for (int i = 0; i < text1.length() && i < text2.length(); i++) {
@@ -14,7 +14,6 @@ public class Main {///
         }
         return count;
     }
-
     public static void main(String[] args) {
         String text1 = ("abc");
         String text2 = ("abc");
@@ -24,5 +23,5 @@ public class Main {///
         String text6 = ("ferris");
         System.out.println(problemOne(text1, text2));
     }
-}
 
+}
