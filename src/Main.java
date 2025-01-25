@@ -15,12 +15,12 @@ public class Main {
         return count;
     }
     public static void main(String[] args) {
-        String text1 = ("abc");
-        String text2 = ("abc");
-        String text3 = "almanacs";
-        String text4 = ("albatross");
-        String text5 = ("almanac");
-        String text6 = ("ferris");
+        //String text1 = ("abc");
+        //String text2 = ("abc");
+        //String text1 = "almanacs";
+        //String text2 = ("albatross");
+        String text1 = ("almanac");
+        String text2 = ("ferris");
         System.out.println(problemOne(text1, text2));
     }
 
