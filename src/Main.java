@@ -3,16 +3,20 @@
 //Introduction to Algorithms
 public class Main {
     public static int problemOne(String text1, String text2){
-        int count = 0;
-        for (int i = 0; i < text1.length() && i < text2.length(); i++) {
-            if (text1.charAt(i) == text2.charAt(i)){
-                count++;
-                System.out.println( i + " are equal");
-            } else {
-                System.out.println( i + " are not equal");
+        int A = text1.length();
+        int B = text2.length();
+
+        int[][] count = new int[A + 1][B + 1];
+        for (int i = 1; i <= A; i++) {
+            for (int j = 1; j <= B; j++) {
+                if (text1.charAt(i - 1) == text2.charAt(j - 1)) {
+                    count[i][j] = count[i - 1][j - 1] + 1;
+                } else {
+                    count[i][j] = Math.max(count[i - 1][j], count[i][j - 1]);
+                }
             }
         }
-        return count;
+        return count[A][B];
     }
     public static void main(String[] args) {
         //String text1 = ("abc");
@@ -23,5 +27,4 @@ public class Main {
         String text2 = ("ferris");
         System.out.println(problemOne(text1, text2));
     }
-
 }
